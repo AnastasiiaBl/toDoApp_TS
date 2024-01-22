@@ -1,19 +1,22 @@
-import styles from "../page/home.module.css";
+import styles from "./TabMenu.module.css";
 
+// interface Props {
+//     menuActive: string;
+//     setMenuActive: (value:string) => void;
+// }
 interface Props {
-    menuActive: string;
-    setMenuActive: (value:string) => void;
+  menuActive: "all" | "active" | "completed";
+  setMenu: (value: "all" | "active" | "completed") => void;
 }
 
-export default function TabMenu( {menuActive, setMenuActive}: Props ) {
+export function TabMenu( {menuActive, setMenu}: Props ) {
 
 
     return(
-        <div className={styles.menu}>
       <div className={styles.menu}>
           <div
             className={styles.menuOption}
-            onClick={() => setMenuActive("all")}
+            onClick={() => setMenu("all")}
           >
             <span>All</span>
             <div
@@ -25,7 +28,7 @@ export default function TabMenu( {menuActive, setMenuActive}: Props ) {
 
           <div
             className={styles.menuOption}
-            onClick={() => setMenuActive("active")}
+            onClick={() => setMenu("active")}
           >
             <span>Active</span>
             <div
@@ -39,7 +42,7 @@ export default function TabMenu( {menuActive, setMenuActive}: Props ) {
 
           <div
             className={styles.menuOption}
-            onClick={() => setMenuActive("completed")}
+            onClick={() => setMenu("completed")}
           >
             <span>Completed</span>
             <div
@@ -50,8 +53,6 @@ export default function TabMenu( {menuActive, setMenuActive}: Props ) {
               }
             ></div>
           </div>
-        </div>
-        <hr className={styles.hr} />
     </div>
   );
 }

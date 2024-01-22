@@ -1,4 +1,4 @@
-import styles from "../page/home.module.css";
+import styles from "./AddToDoForm.module.css";
 
 interface Props {
   menuActive: string;
@@ -8,7 +8,7 @@ interface Props {
   disabled: boolean;
 }
 
-export default function AddTodoForm({
+export function AddToDoForm({
   menuActive,
   addTodo,
   handleChange,
@@ -23,7 +23,7 @@ export default function AddTodoForm({
             <input
               type="text"
               name="todo"
-              placeholder="add details"
+              placeholder="Add details"
               className={styles.input}
               onChange={(event) => handleChange(event)}
               value={todo}

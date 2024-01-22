@@ -1,0 +1,24 @@
+.deleteContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1.5rem 0;
+  }
+  
+  .deleteButton {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 4px;
+    background: #eb5757;
+    padding: 0.8rem 1.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .deleteButton:hover {
+    opacity: 0.7;
+  }

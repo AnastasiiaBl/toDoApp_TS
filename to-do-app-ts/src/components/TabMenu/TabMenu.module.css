@@ -1,0 +1,43 @@
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .menuOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .menuOption span {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+  
+  .underline {
+    width: 89px;
+    height: 4px;
+    border-radius: 4px 4px 0px 0px;
+    background: #ffffff;
+    transition: 0.2s;
+  }
+  
+  .menuOption:hover > .underline {
+    background: #2f80ed;
+  }
+  
+  .underlineActive {
+    width: 89px;
+    height: 4px;
+    border-radius: 4px 4px 0px 0px;
+    background: #2f80ed;
+  }
+  
+  .hr {
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #bdbdbd;
+  }
+  

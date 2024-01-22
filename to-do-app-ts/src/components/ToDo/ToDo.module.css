@@ -1,0 +1,62 @@
+.todoContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  
+  .todo {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #828282;
+    transition: 0.2s;
+  }
+
+  .checkbox:hover {
+    cursor: pointer;
+  }
+  
+  .checkbox:checked {
+    position: relative;
+    background: #2f80ed;
+  }
+  
+  .checkbox::before {
+    content: "✔";
+    font-size: 1.5em;
+    color: #fff;
+    position: absolute;
+    left: 3px;
+    top: -4px;
+  }
+  
+  .label {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .checkbox:checked + .label {
+    color: #333;
+    text-decoration: line-through;
+  }
+  
+  .deleteIcon {
+    color: #bdbdbd;
+    font-size: 20px;
+    margin: 0 0.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .deleteIcon:hover {
+    color: red;
+  }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import styles from "../app/page.module.css";
+import { useEffect, useState } from "react";
+import styles from "./ToDo.module.css";
 import { MdDeleteOutline } from "react-icons/md";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
   deleteTodo: (id: string) => void;
 }
 
-export default function ToDo({ menuActive, todo, reload, setReload, deleteTodo }: Props) {
+export function ToDo({ menuActive, todo, reload, setReload, deleteTodo }: Props) {
   const [teste, setTeste] = useState<boolean>(todo.checked);
 
   function handleCheckbox(event: any) {

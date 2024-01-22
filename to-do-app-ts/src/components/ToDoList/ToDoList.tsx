@@ -1,4 +1,4 @@
-import ToDo from "./ToDo";
+import { ToDo } from "../ToDo/ToDo";
 
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
   deleteTodo: (id: string) => void;
 }
 
-export default function ToDoList({
+export function ToDoList({
   todoList,
   menuActive,
   reload,
