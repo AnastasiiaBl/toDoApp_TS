@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import { Header, TabMenu, AddToDoForm, ToDoList, DeleteButton } from "./components";
 
 function App() {
+  const storedTodoList = localStorage.getItem("todoList");
+  const initialTodoList = storedTodoList ? JSON.parse(storedTodoList) : [];
+  const [todoList, setTodoList] = useState<Todo[]>(initialTodoList);
   const [menuActive, setMenuActive] = useState<"all" | "active" | "completed">("all");
   const [todo, setTodo] = useState<string>("");
-  const [todoList, setTodoList] = useState<Todo[]>([]);
   const [reload, setReload] = useState<boolean>(false);
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -14,7 +16,6 @@ function App() {
 
   function setMenu(value: "all" | "active" | "completed") {
     setMenuActive(value);
-    console.log(todoList)
   } 
 
   function addTodo(event: React.FormEvent<HTMLFormElement>) {
